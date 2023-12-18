@@ -14,7 +14,16 @@
     width:100%;
     height: 100%;
 }
-#pagina{
+.pagina{
     font-size: 30px;
     padding:10px;
+}
+.pagina input{
+    width:40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+.buscador input{
+    margin:auto;
 }
