@@ -1,0 +1,20 @@
+.paginacion{
+    margin-top:30px;
+    margin-bottom: 30px;
+    display:flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius:50px;
+    border:3px solid blanchedalmond;
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.paginacion button{
+    width:100%;
+    height: 100%;
+}
+#pagina{
+    font-size: 30px;
+    padding:10px;
+}

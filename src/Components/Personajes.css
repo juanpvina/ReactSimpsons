@@ -1,0 +1,37 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    border:2px solid #ffdba4;
+    background-color: blanchedalmond;
+    color: black;
+    flex-direction: column;
+    padding: auto;
+    width: 200px;
+    border-radius: 30px;
+    align-items: center;
+    text-align: center;
+    margin:7px;
+}
+
+.card img {
+    width: fit-content;
+    max-height: 150px;
+    margin: auto;
+}
+
+.card p {
+    margin: auto;
+    padding: 0px;
+    max-width: 160px;
+}
+
+.separador {
+    border-top: 1px solid black;
+    width: 100px;
+}
