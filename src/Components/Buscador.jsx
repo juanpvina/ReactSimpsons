@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './Paginacion.css'
+import './Buscador.css'
 
 function Buscador({ info, busqueda }) {
 
@@ -8,9 +8,10 @@ function Buscador({ info, busqueda }) {
   }
 
   return (
+    <div className='espacioInicial'>
       <div className='buscador'>
-       Buscar:<input type="text" onChange={handleInput} name="nombredelacaja" defaultValue="buscador" id="cajabusqueda"/>
-      </div>
+       <p>Buscar:</p><input type="text" onChange={handleInput} name="nombredelacaja" defaultValue="simpson" id="cajabusqueda"/>
+      </div></div>
   );
 }
 

@@ -9,7 +9,7 @@
 
 .card {
     display: flex;
-    border:2px solid #ffdba4;
+    border:2px solid #f79a0c;
     background-color: blanchedalmond;
     color: black;
     flex-direction: column;
@@ -23,7 +23,7 @@
 
 .card img {
     width: fit-content;
-    max-height: 150px;
+    max-height: 160px;
     margin: auto;
 }
 

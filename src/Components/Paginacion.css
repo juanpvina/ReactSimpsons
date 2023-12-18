@@ -13,6 +13,7 @@
 .paginacion button{
     width:100%;
     height: 100%;
+   
 }
 .pagina{
     font-size: 30px;
@@ -24,6 +25,6 @@
     font-size: 30px;
     text-align: center;
 }
-.buscador input{
-    margin:auto;
+button{
+    background-color: #a2dae7;
 }
