@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Menuinicial.css'
 import { Link } from 'react-router-dom'
+import Footer from './Footer';
 
 function Menuinicial({ }) {
 
@@ -16,7 +17,10 @@ function Menuinicial({ }) {
             <Link to="/todojunto">
                 <button type="submit">Ir a todo junto!</button>
             </Link>
+
+            <Footer />
         </div>
+
     );
 }
 
