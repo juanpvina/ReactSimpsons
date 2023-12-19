@@ -9,7 +9,7 @@ function Error() {
   return (
     <>
     <Menu />
-    <div className='error'><img src="./src/assets/img/404.png"></img>
+    <div className='error'><img src="./assets/img/404.png"></img>
     <br/>
     <p className='errortxt'>Error Page { err.statusText }, { err.message }</p></div>
     </>
