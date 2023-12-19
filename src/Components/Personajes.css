@@ -8,17 +8,19 @@
 }
 
 .card {
+    font-size: smaller;
     display: flex;
-    border:2px solid #f79a0c;
+    border: 2px solid #f79a0c;
     background-color: blanchedalmond;
     color: black;
     flex-direction: column;
     padding: auto;
-    width: 200px;
+    width: 160px;
     border-radius: 30px;
     align-items: center;
     text-align: center;
-    margin:7px;
+    margin: 7px;
+    padding-bottom: 12px;
 }
 
 .card img {
@@ -48,5 +50,10 @@ text-shadow: 2px 2px 4px black;
 
     .cards {
         max-width: 1200px;
+    }
+    .card {
+        padding: auto;
+        width: 200px;
+        margin:7px;
     }
 }

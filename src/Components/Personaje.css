@@ -1,19 +1,24 @@
-.personaje{
+.personaje {
+    display: flex;
+    align-items: center;
     font-size: 40px;
-    margin:40px;
+    margin: 30px;
+    justify-content: center;
 }
 .cardp {
+    font-size: 25px;
     display: flex;
-    border:2px solid #f79a0c;
+    border: 2px solid #f79a0c;
     background-color: blanchedalmond;
     color: black;
     flex-direction: column;
     padding: auto;
-    width:90vw;
+    width: 90wv;
     border-radius: 30px;
     align-items: center;
     text-align: center;
-    margin:7px;
+    margin: 7px;
+    padding-bottom: 12px;
 }
 
 .cardp img {
@@ -40,5 +45,10 @@
     .cardp {
         
         width:800px;
+    }
+    .card {
+        padding: auto;
+        width: 200px;
+        margin:7px;
     }
 }

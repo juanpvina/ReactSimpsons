@@ -5,7 +5,6 @@ import Personaje from './Personaje';
 import Paginacion from './Paginacion';
 import Buscador from './Buscador';
 import Menu from './Menu';
-import Footer from './Footer';
 
 
 function App({ modo }) {
@@ -40,6 +39,11 @@ function App({ modo }) {
   }
   const busqueda = (busq) => {
     fetchBusq("https://apisimpsons.fly.dev/api/personajes/find/" + busq);
+  setInfo({
+hasNextPage: false,
+hasPrevPage: false,
+page: 'Src',
+  })
   }
 
   const personaje = (pj) => {

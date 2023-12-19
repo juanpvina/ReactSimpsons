@@ -10,7 +10,7 @@ function Buscador({ info, busqueda }) {
   return (
     <div className='espacioInicial'>
       <div className='buscador'>
-       <p>Buscar:</p><input type="text" onChange={handleInput} name="nombredelacaja" defaultValue="simpson" id="cajabusqueda"/>
+       <p>Buscar:</p><input type="search" onChange={handleInput} name="nombredelacaja" defaultValue="simpson" id="cajabusqueda"/>
       </div></div>
   );
 }
