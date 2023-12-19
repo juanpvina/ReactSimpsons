@@ -24,13 +24,14 @@
 
 @media (min-width: 900px) {
     .espacioInicial{
-        height: 400px;
+        height: 250px;
     } 
     .buscador input{
-        width:300px;
+        width:400px;
         height: 35px;
         font-size: 30px;
         margin-left: 15px;
+        border-radius: 5px;
     }
     .buscador p{
         margin-left:100px;
