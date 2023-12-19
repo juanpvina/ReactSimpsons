@@ -5,7 +5,7 @@
 
   color: rgba(255, 255, 255, 0.87);
   background-color: #17c7f0;
-  background-image: url("./src/assets/img/simpsonhomero.jpg");
+  background-image: url("./assets/img/simpsonhomero.jpg");
   background-size: 1200px 600px;
   background-repeat: no-repeat;
   background-position: top;
@@ -31,6 +31,7 @@ a:hover {
 body {
   margin: auto;
   display: flex;
+  background-image: url("./assets/img/simpsonhomero.jpg");
   place-items: center;
   justify-content: center;
   min-width: 320px;
