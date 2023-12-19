@@ -5,4 +5,13 @@
 }
 .menuinicial button{
     margin:20px;
+    height: 120px;
+}
+
+@media (min-width: 900px) {
+
+    .menuinicial button{
+        margin:20px;
+        height: 60px;
+    }
 }

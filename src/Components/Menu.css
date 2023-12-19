@@ -8,3 +8,28 @@
 .menu Link{
     margin: 5px;
 }
+.menu button{
+margin:5px;
+border:1px solid black;
+font-size: smaller;
+}
+
+@media (min-width: 900px) {
+
+    .menu{
+        display:flex;
+        justify-content: center;
+        margin:5px;
+        position: relative;
+        top: 0;
+    }
+    .menu Link{
+        margin: 5px;
+    }
+    .menu button{
+        height:80px;
+        margin:5px;
+        border:1px solid black;
+        }
+
+}
