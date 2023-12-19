@@ -11,11 +11,7 @@ function App({ modo }) {
   let componentes = [];
   const [chars, setChars] = useState([]);
   const [info, setInfo] = useState([]);
-
   const [pjj, setPj] = useState([]);
-
- 
-  
 
   const initURL = "https://apisimpsons.fly.dev/api/personajes?limit=10";
 
@@ -56,7 +52,6 @@ function App({ modo }) {
       <Menu />,
       <Buscador info={info} busqueda={busqueda} />,
       <Personajes personajes={chars} personaje={personaje}/>];
-    busqueda('simpson');
 
   } else if (modo == "paginado") {
     componentes = [
@@ -76,14 +71,6 @@ function App({ modo }) {
   ];
 
   }
-
-  
-
-
-
-
-
-      
 
   return (
     componentes
