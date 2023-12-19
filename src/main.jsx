@@ -1,10 +1,36 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './Components/App.jsx'
+import Menuinicial from './Components/Menuinicial.jsx'
+import Error from './Components/Error.jsx'
 import './index.css'
+
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
+
+
+const router= createBrowserRouter([
+  {
+    path:"/",
+    element:<Menuinicial />,
+    errorElement: <Error />
+  },
+  {
+    path:"/buscador",
+    element:<App modo={"buscador"}/>,
+  },
+  {
+    path:"/paginado",
+    element:<App modo={"paginado"}/>,
+  },  
+  {
+    path:"/todojunto",
+    element:<App modo={"todojunto"}/>,
+  }
+
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>,
 )

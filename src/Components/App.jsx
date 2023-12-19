@@ -4,7 +4,10 @@ import Personajes from './Personajes';
 import Paginacion from './Paginacion';
 import Buscador from './Buscador';
 
-function App() {
+
+function App({modo}) {
+  console.log(modo);
+  let componentes = [];
   const [chars, setChars] = useState([]);
   const [info, setInfo] = useState([]);
   const initURL = "https://apisimpsons.fly.dev/api/personajes?limit=10";
@@ -35,13 +38,28 @@ function App() {
     fetchBusq("https://apisimpsons.fly.dev/api/personajes/find/" + busq);
   }
 
-  return (
-    <>
-      <Buscador info={info} busqueda={busqueda} />
-      <Personajes personajes={chars} />
-      <Paginacion info={info} cambiopage={cambiopage} />
-    </>
-  )
+  
+
+  if (modo=="buscador") {
+      componentes=[
+  <Buscador info={info} busqueda={busqueda} />,
+  <Personajes personajes={chars} />];
+  busqueda('simpson');
+      
+    }else if (modo=="paginado"){
+componentes=[
+  <Personajes personajes={chars} />,
+  <Paginacion info={info} cambiopage={cambiopage}/>];
+}else if (modo=="todojunto"){
+    componentes=[
+    <Buscador info={info} busqueda={busqueda} />,
+    <Personajes personajes={chars} />,
+    <Paginacion info={info} cambiopage={cambiopage}/>];
+  }
+
+  return(
+    componentes
+  );
 }
 
 export default App
