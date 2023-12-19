@@ -3,10 +3,10 @@ import './App.css'
 import Personajes from './Personajes';
 import Paginacion from './Paginacion';
 import Buscador from './Buscador';
+import Menu from './Menu';
 
 
-function App({modo}) {
-  console.log(modo);
+function App({ modo }) {
   let componentes = [];
   const [chars, setChars] = useState([]);
   const [info, setInfo] = useState([]);
@@ -38,26 +38,27 @@ function App({modo}) {
     fetchBusq("https://apisimpsons.fly.dev/api/personajes/find/" + busq);
   }
 
-  
+  if (modo == "buscador") {
+    componentes = [
+      <Menu />,
+      <Buscador info={info} busqueda={busqueda} />,
+      <Personajes personajes={chars} />];
+    busqueda('simpson');
 
-  if (modo=="buscador") {
-      componentes=[
-  <Buscador info={info} busqueda={busqueda} />,
-  <Personajes personajes={chars} />];
-  busqueda('simpson');
-      
-    }else if (modo=="paginado"){
-componentes=[
-  <Personajes personajes={chars} />,
-  <Paginacion info={info} cambiopage={cambiopage}/>];
-}else if (modo=="todojunto"){
-    componentes=[
-    <Buscador info={info} busqueda={busqueda} />,
-    <Personajes personajes={chars} />,
-    <Paginacion info={info} cambiopage={cambiopage}/>];
+  } else if (modo == "paginado") {
+    componentes = [
+      <Menu />,
+      <Personajes personajes={chars} />,
+      <Paginacion info={info} cambiopage={cambiopage} />];
+  } else if (modo == "todojunto") {
+    componentes = [
+      <Menu />,
+      <Buscador info={info} busqueda={busqueda} />,
+      <Personajes personajes={chars} />,
+      <Paginacion info={info} cambiopage={cambiopage} />];
   }
 
-  return(
+  return (
     componentes
   );
 }
