@@ -9,7 +9,7 @@
     color: black;
     flex-direction: column;
     padding: auto;
-    width:800px;
+    width:90vw;
     border-radius: 30px;
     align-items: center;
     text-align: center;
@@ -32,4 +32,13 @@
 .separador {
     border-top: 1px solid black;
     width: 100px;
+}
+
+
+@media (min-width: 900px) {
+
+    .cardp {
+        
+        width:800px;
+    }
 }

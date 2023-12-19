@@ -3,7 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    max-width: 1200px;
+    max-width: 100%;
     margin:auto;
 }
 
@@ -41,4 +41,12 @@
 .card:hover{
 color:rgb(124, 16, 16);
 text-shadow: 2px 2px 4px black;
+}
+
+
+@media (min-width: 900px) {
+
+    .cards {
+        max-width: 1200px;
+    }
 }
