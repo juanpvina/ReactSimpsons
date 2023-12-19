@@ -1,6 +1,10 @@
+.prepaginacion{
+    text-align: center;
+    margin-bottom: 30px;
+}
 .paginacion{
     margin-top:30px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     display:flex;
     justify-content: center;
     overflow: hidden;
@@ -9,6 +13,9 @@
     width:fit-content;
     margin-left: auto;
     margin-right: auto;
+}
+.prepaginacion p{
+    margin:0;
 }
 .paginacion button{
     width:100%;

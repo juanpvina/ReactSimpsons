@@ -8,11 +8,13 @@
 }
 .buscador p{
     margin-left:100px;
+    margin-right:20px;
 }
 .buscador input{
     width:300px;
     height: 35px;
     font-size: 30px;
+    margin-left: 15px;
 }
 
 .espacioInicial{
