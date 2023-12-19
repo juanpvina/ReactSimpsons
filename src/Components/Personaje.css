@@ -1,5 +1,6 @@
 .personaje{
     font-size: 40px;
+    margin:40px;
 }
 .cardp {
     display: flex;

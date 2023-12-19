@@ -52,27 +52,26 @@ function App({ modo }) {
     componentes = [
       <Menu />,
       <Buscador info={info} busqueda={busqueda} />,
-      <Personajes personajes={chars} personaje={personaje} />,
-      <Footer />];
+      <Personajes personajes={chars} personaje={personaje} />
+    ];
 
   } else if (modo == "paginado") {
     componentes = [
       <Menu />,
       <Personajes personajes={chars} personaje={personaje} />,
-      <Paginacion info={info} cambiopage={cambiopage} />,
-      <Footer />];
+      <Paginacion info={info} cambiopage={cambiopage} />
+    ];
   } else if (modo == "todojunto") {
     componentes = [
       <Menu />,
       <Buscador info={info} busqueda={busqueda} />,
       <Personajes personajes={chars} personaje={personaje} />,
-      <Paginacion info={info} cambiopage={cambiopage} />,
-      <Footer />];
+      <Paginacion info={info} cambiopage={cambiopage} />
+    ];
   } else if (modo == "personaje") {
     componentes = [
       <Menu />,
-      <Personaje personaje={pjj} />,
-      <Footer />
+      <Personaje personaje={pjj} />
     ];
 
   }

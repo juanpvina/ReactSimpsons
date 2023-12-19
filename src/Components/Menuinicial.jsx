@@ -18,7 +18,7 @@ function Menuinicial({ }) {
                 <button type="submit">Ir a todo junto!</button>
             </Link>
 
-            <Footer />
+    
         </div>
 
     );
