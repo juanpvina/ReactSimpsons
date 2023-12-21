@@ -9,7 +9,8 @@
     font-size: 25px;
     display: flex;
     border: 2px solid #f79a0c;
-    background-color: blanchedalmond;
+    background: rgb(254,218,165);
+    background: radial-gradient(circle, rgba(254,218,165,1) 5%, rgba(123,220,249,1) 60%);
     color: black;
     flex-direction: column;
     padding: auto;
@@ -46,9 +47,9 @@
         
         width:800px;
     }
-    .card {
+    .cardp {
         padding: auto;
-        width: 200px;
-        margin:7px;
+        width: 800px;
+        margin:10px;
     }
 }
