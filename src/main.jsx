@@ -4,7 +4,6 @@ import App from './Components/App.jsx'
 import Menuinicial from './Components/Menuinicial.jsx'
 import Error from './Components/Error.jsx'
 import './index.css'
-import Personaje from './Components/Personaje.jsx'
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import Footer from './Components/Footer.jsx'
