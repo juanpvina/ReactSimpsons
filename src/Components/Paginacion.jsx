@@ -3,13 +3,13 @@ import './Paginacion.css'
 
 function Paginacion({ info, cambiopage }) {
   const handleRetroceder = () => {
-    cambiopage(info.prevPage)
+    cambiopage(info.prevPage,10)
   }
   const handleAvanzar = () => {
-    cambiopage(info.nextPage)
+    cambiopage(info.nextPage,10)
   }
   const handleInput = () => {
-    cambiopage(numeropag.value)
+    cambiopage(numeropag.value,10)
   }
 
   return (

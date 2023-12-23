@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react'
 import './Personajes.css'
 import { Link } from 'react-router-dom'
 
-function Personajes( {personajes , personaje} ) {
+function Personajes( {personajes , personaje } ) {
 
   const handlePersonaje = (pj) => {
     personaje(pj);
   }
-
   return (
  
       <div className="cards">

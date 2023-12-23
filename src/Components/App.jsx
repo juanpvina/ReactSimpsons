@@ -11,7 +11,7 @@ function App({ modo }) {
   let componentes = [];
   const [chars, setChars] = useState([]);
   const [info, setInfo] = useState([]);
-  const [pjj, setPj] = useState([]);
+  const [pjj, setPj] = useState([]); 
 
   const initURL = "https://apisimpsons.fly.dev/api/personajes?limit=10";
 
@@ -32,10 +32,11 @@ function App({ modo }) {
   }
   useEffect(() => {
     fetchChars(initURL);
+
   }, []);
 
-  const cambiopage = (page) => {
-    fetchChars("https://apisimpsons.fly.dev/api/personajes?limit=10&page=" + page);
+  const cambiopage = (page,limit) => {
+    fetchChars("https://apisimpsons.fly.dev/api/personajes?limit="+limit+"&page=" + page);
   }
   const busqueda = (busq) => {
     fetchBusq("https://apisimpsons.fly.dev/api/personajes/find/" + busq);
@@ -47,38 +48,59 @@ page: 'Src',
   }
 
   const personaje = (pj) => {
-    modo = "personaje";
     setPj(pj);
     console.log(pj);
   }
 
   if (modo == "buscador") {
     componentes = [
-      <Menu />,
+      <Menu  cambiopage={cambiopage} menu={true}/>,
       <Buscador info={info} busqueda={busqueda} />,
       <Personajes personajes={chars} personaje={personaje} />
     ];
 
   } else if (modo == "paginado") {
     componentes = [
-      <Menu />,
+      <Menu  cambiopage={cambiopage} menu={true}/>,
       <Personajes personajes={chars} personaje={personaje} />,
       <Paginacion info={info} cambiopage={cambiopage} />
     ];
   } else if (modo == "todojunto") {
     componentes = [
-      <Menu />,
+      <Menu  cambiopage={cambiopage} menu={true}/>,
       <Buscador info={info} busqueda={busqueda} />,
       <Personajes personajes={chars} personaje={personaje} />,
       <Paginacion info={info} cambiopage={cambiopage} />
     ];
   } else if (modo == "personaje") {
+    
     componentes = [
-      <Menu />,
+      <Menu  cambiopage={cambiopage} menu={true}/>,
       <Personaje personaje={pjj} />
     ];
 
-  }
+  } else if (modo == "todoslospersonajes") {
+    componentes = [
+      /*
+quise poner acá un
+
+cambiopage(page,limit);
+
+cambiopage(1,100); 
+
+pero lo hace en loop sin parar, igual que en el menú, tuve que buscar alternativas para frenar el tema del loop,
+pero me gustaría saber cómo podría llamar una funcion antes de entrar a un menú, por ejemplo..
+
+      */
+      <Menu  cambiopage={cambiopage} menu={true}/>,
+      <Personajes personajes={chars} personaje={personaje} />
+    ];
+
+  }else if (modo == "menuinicial") {
+    componentes = [
+      <Menu  cambiopage={cambiopage} menu={false}/>,
+    ];
+  } 
 
   return (
     componentes

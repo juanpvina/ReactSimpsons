@@ -12,12 +12,12 @@ import Footer from './Components/Footer.jsx'
 const router= createBrowserRouter([
   {
     path:"/",
-    element:<Menuinicial />,
+    element:<App modo={"menuinicial"} />,
     errorElement: <Error />
   },
   {
     path:"/buscador",
-    element:<App modo={"buscador"}/>,
+    element:<App modo={"buscador"}/>
   },
   {
     path:"/paginado",
@@ -30,6 +30,10 @@ const router= createBrowserRouter([
   {
     path:"/personaje",
     element:<App modo={"personaje"}/>,
+  },
+  {
+    path:"/todoslospersonajes",
+    element:<App modo={"todoslospersonajes"}/>,
   }
 
 ])
